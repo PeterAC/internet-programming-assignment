@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<head>
+	<title>Assignment 1 | HTML5</title>
+	<meta charset="utf-8">
+	<link rel="stylesheet" type="text/css" href="styles/main.css">
+	<link rel ="shortcut icon" href="images/favicon.ico">
+	<script src="scripts/html5shiv.js"></script>
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
+	<script src="scripts/nav.js"></script>
+	<script>
+		window.onload = function () {
+			aCanvas = document.getElementById("canvas-one");
+			aContext = aCanvas.getContext("2d");
+		};
+	
+		function drawRect () {
+			aContext.fillStyle = "black";
+			aContext.fillRect(50, 60, 200, 120);
+		}
+		
+		function drawRectBlue () {
+			aContext.fillStyle = "#89CEDE";
+			aContext.fillRect(50, 60, 200, 120);
+		}
+		
+		function drawGradient ()  {
+			aGradient = aContext.createLinearGradient(0, 0, 300, 0);
+			aGradient.addColorStop(0, "#89CEDE");
+			aGradient.addColorStop(1, "white");
+			aContext.fillStyle = aGradient;
+			aContext.fillRect(50, 60, 200, 120);
+		}
+		
+		function resetCanvas () {
+			aCanvas.width = aCanvas.width;
+		}
+		
+		function svgClick () {
+			var circ = document.getElementById("circle");
+			if (circ.getAttribute("fill") == "#C7C9BE") {
+				circ.setAttribute("fill", "#89CEDE");
+			} else {
+				circ.setAttribute("fill", "#C7C9BE");
+			}
+		}
+		
+	</script>
+</head>
+<body>
+	<header>
+		<div class="container">
+			<span id="internet">Internet</span><br>
+			Programming<br>
+			<span id="name">Peter Cornell</span>
+		</div>
+	</header>
+	<div class="container">
+		<nav>
+			<ul class="menu">
+				<li id="nav1"><a href="index.html">Home</a></li>
+				<li id="nav2"><a href="html5.html">HTML5</a></li>
+				<li id="nav3"><a href="css3.html">CSS3</a></li>
+				<li id="nav4"><a href="javascript.html">JavaScript</a></li>
+			</ul>
+		</nav>
+		<section class="main">
+			<h1>HTML5</h1>
+			 
+			<p><img src="images/html5.png" class="heading-img" height="180px" />
+				HTML or Hyper-Text Markup Language is the primary language used in the creation of web pages.
+				Since its creation in 1993 by Tim Berners-Lee, one of the original creators of the internet, it has been a backbone of web pages around the world.
+			</p>
+			<p>
+				Over the years it has undergone a many updates and revisions. The most recent version, HTML5, was released in 2008 and introduced a slew of new features aimed primarily at 
+				supporting new forms of multimedia and dynamic graphical content.
+			</p>
+			<br />
+			
+			<h2>The Canvas Tag</h2>
+			<p>The Canvas tag can be used in combination with JavaScript to draw bitmap images to the screen.</p>
+			<button onclick="drawRect()">Default</button>
+			<button onclick="drawRectBlue()">Blue </button>
+			<button onclick="drawGradient()">Gradient </button>
+			<button onclick="resetCanvas()">Reset</button>
+			<br /><br />
+			<canvas id="canvas-one" height="240" width="300"></canvas>
+			<br />
+			
+			<p class="code">
+			function drawRect () {<br/>
+			&emsp;&emsp;aCanvas = document.getElementById("canvas-one");<br/>
+			&emsp;&emsp;aContext = aCanvas.getContext("2d");<br/>
+			&emsp;&emsp;aContext.fillStyle = "black";<br/>
+			&emsp;&emsp;aContext.fillRect(50, 60, 200, 120);<br/>
+			}<br/>
+			<br/>
+			&lt;button onclick="drawRect()"&gt;Default&lt;/button&gt;<br/>
+			&lt;canvas id="canvas-one" height="240" width="300"&gt;&lt;/canvas&gt;
+			</p>
+			
+			<h2>SVG</h2>
+			<p>SVG or Scalable Vector Graphics are used to draw vector graphics to the screen which can be rescaled to any size
+				without pixelating. Another advantage of SVG over the Canvas tag is that because they accessible via the DOM,
+				JavaScript event handlers such as click events can be assigned to them. Click the image below to change its colour.</p> 
+			<svg id="svg" height="240" width="300">
+				<circle id="circle" cx="150" cy="120" r="100" fill="#C7C9BE" stroke="#DC4E00" stroke-width="2" onclick="svgClick()"></circle>
+			</svg>
+			<br />
+			
+			<p class="code">
+			function svgClick () {<br/>
+			&emsp;&emsp;var circ = document.getElementById("circle");<br/>
+			&emsp;&emsp;if (circ.getAttribute("fill") == "#C7C9BE") {<br/>
+			&emsp;&emsp;&emsp;&emsp;circ.setAttribute("fill", "#89CEDE");<br/>
+			&emsp;&emsp;} else {<br/>
+			&emsp;&emsp;&emsp;&emsp;circ.setAttribute("fill", "#C7C9BE");<br/>
+			&emsp;&emsp;}<br/>
+			}<br/>
+			<br/>
+			&lt;svg id="svg" height="240" width="300"&gt;<br/>
+			&emsp;&emsp;&lt;circle id="circle" cx="150" cy="120" r="100" fill="#C7C9BE" stroke="#DC4E00" stroke-width="2" onclick="svgClick()"&gt;&lt;/circle&gt;<br/>
+			&lt;/svg&gt;<br/>
+			</p>
+				
+		</section>
+		<br>
+	</div>
+	<footer>
+		<div class="container">
+			<span class="name">Peter Cornell</span>
+			Assignment 1
+			<span class="num">3106909413</span>
+		</div>
+	</footer>
+</body>

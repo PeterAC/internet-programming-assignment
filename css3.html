@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<head>
+	<title>Assignment 1 | CSS3</title>
+	<meta charset="utf-8">
+	<link rel="stylesheet" type="text/css" href="styles/main.css">
+	<link rel ="shortcut icon" href="images/favicon.ico">
+	<script src="scripts/html5shiv.js"></script>
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
+	<script src="scripts/nav.js"></script>
+</head>
+<body>
+	<header>
+		<div class="container">
+			<span id="internet">Internet</span><br>
+			Programming<br>
+			<span id="name">Peter Cornell</span>
+		</div>
+	</header>
+	<div class="container">
+		<nav>
+			<ul class="menu">
+				<li id="nav1"><a href="index.html">Home</a></li>
+				<li id="nav2"><a href="html5.html">HTML5</a></li>
+				<li id="nav3"><a href="css3.html">CSS3</a></li>
+				<li id="nav4"><a href="javascript.html">JavaScript</a></li>
+			</ul>
+		</nav>
+		<section class="main">
+			<h1>CSS3</h1>
+			<p><img src="images/css3.png" class="heading-img" height="180px" /> 
+				CSS or Cascading Style Sheets are used to describe the formatting and style of a web page written in a markup language.
+				Prior to the use of CSS, formatting was done using HTML which often led to messy code which was difficult to manage. Like HTML,
+				there have been several versions of CSS since its inception in 1996. The current version, CSS3, contains many new features aimed
+				at creating more dynamic and interesting web content.
+			</p>
+			<br /><br />
+			
+			<h2>Gradients</h2>
+			<p>
+				Prior to CSS3, pre-rendered images were required in order to display gradients but with CSS3, gradients can be created using stylesheets.
+			</p>
+			<div id="gradient"></div>
+			<br />
+			<p class="code">
+				#gradient {<br />
+				&emsp;&emsp;display: block;<br />
+				&emsp;&emsp;height: 200px;<br />
+				&emsp;&emsp;width: 300px;<br />
+				&emsp;&emsp;border: 1px solid #929487;<br />
+				&emsp;&emsp;background: -webkit-linear-gradient(#DC4E00, #89CEDE);<br />
+				&emsp;&emsp;background: -o-linear-gradient(#DC4E00, #89CEDE);<br />
+				&emsp;&emsp;background: -moz-linear-gradient(#DC4E00, #929487);<br />
+				&emsp;&emsp;background: linear-gradient(#89CEDE, white);<br />
+				}<br />
+				<br />
+				&lt;div id="gradient"&gt;&lt;/div&gt;
+			</p>
+			<br />
+			
+			<h2>Custom Fonts</h2>
+			<p>
+				CSS3 allows web designers to make use of custom fonts without having to worry about whether the end-user has the 
+				font installed on their machine or not.
+			</p>
+			<p id="cfont">This is a custom font.</p>
+			
+			<p class="code">
+				@font-face {<br />
+				&emsp;&emsp;font-family: signaritaChloe;<br />
+				&emsp;&emsp;src: url(fonts/signarita_chloe.ttf)<br />
+				}
+			</p>
+			<br />
+			
+			<h2>Animations</h2>
+			<p>
+				Using CSS3, designers can easily animate changes in formatting.
+			</p>
+			<div id="animation"></div>
+			<br />
+			<p class="code">
+				#animation {<br />
+				&emsp;&emsp;height: 200px;<br />
+				&emsp;&emsp;width: 200px;<br />
+				&emsp;&emsp;animation: frames 5s infinite;<br />
+				}<br />
+				<br />
+				@keyframes frames {<br />
+				&emsp;&emsp;0% {background: #89CEDE;}<br />
+				&emsp;&emsp;25% {margin-left: 50px;}<br />
+				&emsp;&emsp;50% {width: 300px;}<br />
+				&emsp;&emsp;100% {background: white;}<br />
+				}
+			</p>
+		</section>
+		<br>
+	</div>
+	<footer>
+		<div class="container">
+			<span class="name">Peter Cornell</span>
+			Assignment 1
+			<span class="num">3106909413</span>
+		</div>
+	</footer>
+</body>

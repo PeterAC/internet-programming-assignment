@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<head>
+	<title>Assignment 1 | JavaScript</title>
+	<meta charset="utf-8">
+	<link rel="stylesheet" type="text/css" href="styles/main.css">
+	<link rel ="shortcut icon" href="images/favicon.ico">
+	<script src="scripts/html5shiv.js"></script>
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
+	<script src="scripts/nav.js"></script>
+	<script>
+		function jsSequence() {
+			alert("Step One");
+			alert("Step Two");
+			alert("Step Three");
+		}
+
+		function jsIf() {
+			if (isNaN(prompt("Enter a word or number: ")))
+				alert("You entered a word");
+			else
+				alert("You entered a number");
+		}
+
+		function jsWhile() {
+			var counter = 1;
+			while (counter < 4) {
+				alert("Step " + counter);
+				counter++;
+			}
+		}
+
+		function changeImg(picSrc) {
+			document.getElementById("bird-img").src = picSrc;
+		}
+	</script>
+</head>
+<body>
+	<header>
+		<div class="container">
+			<span id="internet">Internet</span><br>
+			Programming<br>
+			<span id="name">Peter Cornell</span>
+		</div>
+	</header>
+	<div class="container">
+		<nav>
+			<ul class="menu">
+				<li id="nav1"><a href="index.html">Home</a></li>
+				<li id="nav2"><a href="html5.html">HTML5</a></li>
+				<li id="nav3"><a href="css3.html">CSS3</a></li>
+				<li id="nav4"><a href="javascript.html">JavaScript</a></li>
+			</ul>
+		</nav>
+		<section class="main">
+			<h1>JavaScript</h1>
+			<p><img src="images/js-rounded.png" class="heading-img" height="180px" />
+				JavaScript is a primarily client-side scripting language used commonly throughout the web to create dynamic web pages in a way not
+				possible with HTML or CSS alone. Common uses of JavaScript include: animating page elements, embedding audio or video into a web page,
+				validating web forms, and detecting user input such as keystrokes. Although JavaScript shares similar syntax and naming conventions with Java, it is an
+				entirely different language with different semantics.
+			</p>
+			
+			<br /><br />
+			
+			<h2>Sequential Programming</h2>
+			<img src="images/flow-seq.png" width="130" class="flowchart">
+			<p>
+				This is an example of sequential programming using JavaScript.
+			</p>
+			<button onclick="jsSequence()">
+				JS Sequence
+			</button>
+			
+			<br/>
+			
+			<p class="code">
+				function jsSequence () {
+				<br />
+				&emsp;&emsp;alert("Step One");
+				<br />
+				&emsp;&emsp;alert("Step Two");
+				<br />
+				&emsp;&emsp;alert("Step Three");
+				<br />
+				}
+				<br />
+				<br />
+				&lt;button onclick="jsSequence()&gt;JS Sequence&lt;/button&gt;
+			</p>
+			
+			<br /><br /><br /><br /><br /><br /><br />
+			
+			<h2>If Statement</h2>
+			<p>
+				This is a conditional If statement which gives a different output depending on the user's input.
+			</p>
+			<button onclick="jsIf()">
+				JS If
+			</button>
+			<br /><br /><br />
+			<img src="images/flow-if.png" height="240" style="margin-left:120px;"  />
+			<p class="code">function jsIf() {<br/>
+			if (isNaN(prompt("Enter a word or number: ")))<br/>
+			&emsp;&emsp;alert("You entered a word");<br/>
+			else<br/>
+			&emsp;&emsp;alert("You entered a number");<br/>
+			}<br />
+			<br />
+			&lt;button onclick="jsIf()"&gt;JS If&lt;/button&gt;
+			</p>
+			
+			<br/>
+
+			<h2>While Loop</h2>
+			<img src="images/flow-while.png" width="210" class="flowchart" />
+			<br /><br /><br />
+			<p>
+				This is a while loop which repeats the same action until a specified condition is met.
+			</p>
+			<button onclick="jsWhile()">
+				JS While
+			</button>
+			
+			<br/>
+			
+			<p class="code">
+			function jsWhile() {<br/>
+			var counter = 1;<br/>
+			&emsp;&emsp;while (counter &lt; 4) {<br/>
+			&emsp;&emsp;&emsp;&emsp;alert("Step " + counter);<br/>
+			&emsp;&emsp;&emsp;&emsp;counter++;<br/>
+			&emsp;&emsp;}<br/>
+			}<br/>
+			<br />
+			&lt;button onclick="jsWhile()"&gt;JS While&lt;/button&gt;
+			</p>
+			
+			<br /><br /><br /><br /><br /><br /><br /><br /><br />
+			
+			<h2>Manipulating DOM elements</h2>
+			<p>
+				A common use of JavaScript is manipulating DOM elements.
+			</p>
+			<img src="images/bird3.jpg" id="bird-img"  />
+			<br /><br />
+			<button onclick='changeImg("images/bird1.jpg")'>
+				Image One
+			</button>
+			<button onclick='changeImg("images/bird2.jpg")'>
+				Image Two
+			</button>
+			<button onclick='changeImg("images/bird3.jpg")'>
+				Image Three
+			</button>
+			
+			<p class="code">
+				function changeImg(picSrc) {<br />
+				&emsp;&emsp;document.getElementById("bird-img").src = picSrc;<br />
+				}<br />
+				<br />
+				&lt;img src="images/bird3.jpg" id="bird-img"  /&gt;<br />
+				&lt;button onclick='changeImg("images/bird1.jpg")'&gt;<br />
+				&emsp;&emsp;Image One<br />
+				&lt;/button><br />
+				&lt;button onclick='changeImg("images/bird2.jpg")'&gt;<br />
+				&emsp;&emsp;Image Two<br />
+				&lt;/button&gt;<br />
+				&lt;button onclick='changeImg("images/bird3.jpg")'&gt;<br />
+				&emsp;&emsp;Image Three<br />
+				&lt;/button&gt;<br />
+			</p>
+			
+		</section>
+		<br>
+	</div>
+	<footer>
+		<div class="container">
+			<span class="name">Peter Cornell</span>
+			Assignment 1
+			<span class="num">3106909413</span>
+		</div>
+	</footer>
+</body>

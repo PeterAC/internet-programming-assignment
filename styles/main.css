@@ -1,0 +1,236 @@
+article, aside, figure, footer, header, hgroup,
+menu, nav, section { display: block; }
+
+body {
+	font-family: "Helvetica Neue", helvetica, verdana, sans-serif;
+	margin: 0;
+	padding: 0;	
+}
+
+@font-face {
+	font-family: champagne;
+	src: url(fonts/champagne.ttf) format('truetype');
+}
+
+@font-face {
+	font-family: champagneBold;
+	src: url(fonts/champagne_bold.ttf) format('truetype');
+}
+
+@font-face {
+	font-family: signaritaChloe;
+	src: url(fonts/signarita_chloe.ttf) format('truetype');
+}
+
+@font-face {
+	font-family: walker;
+	src: url(fonts/walker.ttf) format('truetype');
+}
+
+/*Header*/
+header .container {
+	width: 930px;
+	margin: 0 auto;
+	overflow: hidden;
+}
+
+header {
+	font-family: champagneBold;
+	font-size: 400%;
+	line-height: 80%;
+	color: white;
+	text-shadow: 1px 1px 1px #888888;
+	background-color: #89CEDE;
+	padding: 15px 0;
+	border-bottom: 10px solid #DC4E00;
+	box-shadow: 1px 1px 3px #888888;	
+}
+
+header #internet {
+	font-family: champagne;
+}
+
+header #name {
+	font-family: walker;
+	font-size: 90%;
+	/*line-height: 150%;*/
+}
+
+/*Main article*/
+.container {
+	width: 970px;
+	margin: 0 auto;
+	overflow: auto;
+}
+
+.main {
+	float: left;
+	width: 700px;
+	min-height: 675px;
+	margin: 20px 0;
+	padding: 0.2em 1.5em;
+	text-align: justify;
+	background-color: #F2F2F2;
+	box-shadow: 0 0 5px 2px #A09F9F;
+}
+
+.main h1 {
+	font-family: "Myriad Pro", helvetica, sans-serif;
+	font-size: 250%;
+	margin: 10px 0px 0px;
+	text-shadow: 1px 1px 1px #AAAAAA;
+}
+
+.main h2 {
+	font-family: "Myriad Pro", helvetica, sans-serif;
+	font-size: 150%;
+	text-shadow: 1px 1px 1px #AAAAAA;
+}
+
+.main .heading-img {
+	float: left;
+	padding: 0 12px 7px 0;
+}
+
+.main .code {
+	font-family: monospace;
+	font-size: 1.15em;
+	background-color: white;
+	border: 2px solid #929487;
+	padding: 5px;
+	overflow: hidden;
+}
+
+/*Nav*/
+.menu {
+	float: left;
+	width: 160px;
+	min-height: 660px;
+	margin: 20px 20px 20px 20px;
+	padding: 8px 16px 16px 0;
+	background-color: #9B9B9B;
+	box-shadow: 2px 2px 2px #888888;
+}
+
+.menu li {
+	display: block;
+	margin: 5px 0 5px 30px;
+	background-color: #CCCCCC;
+	text-shadow: 1px 1px 1px #AAAAAA;
+	box-shadow: 2px 2px 2px #888888;
+}
+
+.menu li:hover {
+	background-color: #F2F2F2;
+}
+
+.menu a {
+	display: block;
+	font-family: "Myriad Pro", helvetica, sans-serif;	
+	font-size: 140%;
+	text-decoration: none;
+	color: white;
+	padding: 15px;
+}
+
+.menu a:hover {
+	color: #9B9B9B;
+}
+
+/*Footer*/
+footer {
+	height: 70px;
+	font-size: 1.1em;
+	text-shadow: 1px 1px 1px #AAAAAA;
+	color: white;
+	background-color: #89CEDE;
+	padding-top: 50px;
+	border-top: 10px solid #DC4E00;
+	box-shadow: 2px -2px 2px #888888;
+}
+
+footer .container {
+	margin: auto;
+	width: 970px;
+}
+
+footer .name {
+	float: left;
+	width: 420px;
+}
+
+footer .num {
+	float: right;
+	text-align: right;
+}
+
+/*HTML5*/
+canvas, svg {
+	border: 1px dotted black;
+}
+
+svg circle:hover {
+	cursor: pointer;
+}
+	
+/*CSS3*/
+#gradient {
+	height: 200px;
+	width: 300px;
+	border: 1px solid #929487;
+	background: -webkit-linear-gradient(#DC4E00, #89CEDE); /* For Safari 5.1 to 6.0 */
+	background: -o-linear-gradient(#DC4E00, #89CEDE); /* For Opera 11.1 to 12.0 */
+	background: -moz-linear-gradient(#DC4E00, #929487); /* For Firefox 3.6 to 15 */
+	background: linear-gradient(#89CEDE, white); /* Standard syntax */
+}
+
+#cfont {
+	font-family: signaritaChloe;
+	font-size: 450%;
+	margin: 0;
+}
+
+#animation {
+	height: 200px;
+	width: 200px;
+	animation: frames 5s infinite;
+	-webkit-animation: frames 5s infinite; /* Chrome, Safari, Opera */
+}
+
+@keyframes frames {
+	0% {background: #89CEDE;}
+	25% {margin-left: 50px;}
+	50% {width: 300px;}
+	100% {background: white;}
+}
+
+@-webkit-keyframes frames {
+	0% {background: #89CEDE;}
+	25% {margin-left: 50px;}
+	50% {width: 300px;}
+	100% {background: white;}
+}
+
+/*JS*/
+.main .flowchart {
+	float: left;
+	margin-right: 5px;
+}
+
+.main #bird-img {box-shadow: 2px 2px 1px 1px gray;}
+
+button {
+	color: white;
+	width: 100px;
+	background-color: #9B9B9B;
+	border: 1px solid #CCCCCC;
+	border-radius: 5px;
+	padding: 3px;
+	cursor: pointer;
+}
+
+button:hover {
+	color: #9B9B9B;
+	background-color: white;
+	border: 1px solid #888888;
+}
